@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+function currentHostname() {
+    var parser = document.createElement('a');
+    parser.href = safari.application.activeBrowserWindow.activeTab.url;
+    return parser.hostname;
+}
+
+</script>
+</body>
+</html>
