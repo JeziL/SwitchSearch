@@ -3,11 +3,26 @@
 <body>
 <script>
 
+var engines;
+
 function currentHostname() {
     var parser = document.createElement('a');
     parser.href = safari.application.activeBrowserWindow.activeTab.url;
     return parser.hostname;
 }
+
+function loadEngines() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', safari.extension.baseURI + 'config/engines.json', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4) {
+            engines = JSON.parse(xhr.responseText).engines;
+        }
+    };
+    xhr.send();
+}
+
+loadEngines();
 
 </script>
 </body>

@@ -1,0 +1,20 @@
+{"engines":[
+    {
+        "name": "Google",
+        "hostnameKeyword": "google",
+        "keywordParam": "q",
+        "searchUrl":"https://www.google.com/search"
+    },
+    {
+        "name": "Baidu",
+        "hostnameKeyword": "baidu",
+        "keywordParam": "wd",
+        "searchUrl":"https://www.baidu.com/s"
+    },
+    {
+        "name": "DuckDuckGo",
+        "hostnameKeyword": "baidu",
+        "keywordParam": "q",
+        "searchUrl":"https://duckduckgo.com/"
+    }
+]}

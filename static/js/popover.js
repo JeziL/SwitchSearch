@@ -1,2 +1,4 @@
 var contentBox = document.getElementById('engines');
-contentBox.innerHTML = safari.extension.globalPage.contentWindow.currentHostname();
+var $global = safari.extension.globalPage.contentWindow;
+
+contentBox.innerHTML = $global.engines[0].name;
