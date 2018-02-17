@@ -23,6 +23,12 @@ function loadEngines() {
 }
 
 loadEngines();
+safari.application.addEventListener('command', function (event) {
+    if (event.command == 'swBtnClicked') {
+        event.target.popover.contentWindow.location.reload();
+        event.target.showPopover();
+    }
+}, false);
 
 </script>
 </body>

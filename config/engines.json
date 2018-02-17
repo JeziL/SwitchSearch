@@ -13,7 +13,7 @@
     },
     {
         "name": "DuckDuckGo",
-        "hostnameKeyword": "baidu",
+        "hostnameKeyword": "duckduckgo",
         "keywordParam": "q",
         "searchUrl":"https://duckduckgo.com/"
     }

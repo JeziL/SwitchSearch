@@ -36,6 +36,8 @@
 		<key>Toolbar Items</key>
 		<array>
 			<dict>
+				<key>Command</key>
+				<string>swBtnClicked</string>
 				<key>Identifier</key>
 				<string>swBtn</string>
 				<key>Image</key>
