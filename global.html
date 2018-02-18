@@ -6,9 +6,8 @@
 var engines;
 
 function currentHostname() {
-    var parser = document.createElement('a');
-    parser.href = safari.application.activeBrowserWindow.activeTab.url;
-    return parser.hostname;
+    var url = new URL(safari.application.activeBrowserWindow.activeTab.url);
+    return url.hostname;
 }
 
 function loadEngines() {
@@ -20,6 +19,38 @@ function loadEngines() {
         }
     };
     xhr.send();
+}
+
+function getQuery(engine) {
+    var url = new URL(safari.application.activeBrowserWindow.activeTab.url);
+    return url.searchParams.get(engine.keywordParam);
+}
+
+function formatSearchURL(query, engine) {
+    var url = new URL(engine.searchUrl);
+    if (query == null) {
+        return url.origin;
+    }
+    return insertParam(url, engine.keywordParam, query);
+}
+
+function insertParam(url, key, value) {
+    key = encodeURI(key); value = encodeURI(value);
+    var kvp = url.search.substr(1).split('&');
+    var i = kvp.length; var x; 
+    while (i--) {
+        x = kvp[i].split('=');
+        if (x[0]==key) {
+            x[1] = value;
+            kvp[i] = x.join('=');
+            break;
+        }
+    }
+    if (i < 0) {
+        kvp[kvp.length] = [key, value].join('=');
+    }
+    url.search = kvp.join('&'); 
+    return url;
 }
 
 loadEngines();

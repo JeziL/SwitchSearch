@@ -12,7 +12,21 @@ for (var i = 0; i < engines.length; i++) {
 }
 
 if (currentEngine == null) {
-    contentBox.innerHTML = "Unsupported website.";
+    contentBox.innerHTML = 'Unsupported website.';
 } else {
-    contentBox.innerHTML = currentEngine.name;
+    var query = $global.getQuery(currentEngine);
+    for (var i = 0; i < engines.length; i++) {
+        var e = engines[i];
+        var p = document.createElement('p');
+        var a = document.createElement('a');
+        a.innerHTML = e.name;
+        if (e.name != currentEngine.name) {
+            a.class = 'enabled';
+            a.href = $global.formatSearchURL(query, e).toString();
+        } else {
+            a.class = 'disabled';
+        }
+        p.appendChild(a);
+        contentBox.appendChild(p);
+    } 
 }
