@@ -26,6 +26,9 @@ if (currentEngine == null) {
         if (e.name != currentEngine.name) {
             a.className = 'enabled';
             a.href = $global.formatSearchURL(query, e).toString();
+            a.onclick = function () {
+                safari.self.hide();
+            }
         } else {
             a.className = 'disabled';
         }
