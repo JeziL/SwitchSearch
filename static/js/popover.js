@@ -2,6 +2,7 @@ var contentBox = document.getElementById('engines');
 var $global = safari.extension.globalPage.contentWindow;
 
 var engines = $global.engines;
+safari.self.height = 37 * Math.min(engines.length, 5) + 35;
 var hostname = $global.currentHostname();
 var currentEngine = null;
 for (var i = 0; i < engines.length; i++) {
