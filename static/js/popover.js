@@ -12,7 +12,10 @@ for (var i = 0; i < engines.length; i++) {
 }
 
 if (currentEngine == null) {
-    contentBox.innerHTML = 'Unsupported website.';
+    var p = document.createElement('p');
+    p.className = 'error';
+    p.innerHTML = 'Unsupported website.';
+    contentBox.appendChild(p);
 } else {
     var query = $global.getQuery(currentEngine);
     for (var i = 0; i < engines.length; i++) {
@@ -21,10 +24,10 @@ if (currentEngine == null) {
         var a = document.createElement('a');
         a.innerHTML = e.name;
         if (e.name != currentEngine.name) {
-            a.class = 'enabled';
+            a.className = 'enabled';
             a.href = $global.formatSearchURL(query, e).toString();
         } else {
-            a.class = 'disabled';
+            a.className = 'disabled';
         }
         p.appendChild(a);
         contentBox.appendChild(p);
