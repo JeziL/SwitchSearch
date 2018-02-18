@@ -12,6 +12,12 @@
         "searchUrl":"https://www.baidu.com/s"
     },
     {
+        "name": "Bing",
+        "hostnameKeyword": "bing",
+        "keywordParam": "q",
+        "searchUrl":"http://cn.bing.com/search?ensearch=1"
+    },
+    {
         "name": "DuckDuckGo",
         "hostnameKeyword": "duckduckgo",
         "keywordParam": "q",
