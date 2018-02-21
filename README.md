@@ -31,3 +31,7 @@ There is an `engines` array in the config file, and each element is a JSON objec
 You can install it with Safari’s Extension Builder. Enable the Safari developer tools by clicking "Show Develop menu in menu bar" in the Advanced pane of Safari preferences, then choose Show Extension Builder from the Develop menu.
 
 Unfortunately, the extension will be uninstalled automatically once you restart Safari, unless you have joined the Apple Developer Program (which means you need to pay $99 to Apple every year) and sign it with a developer certificate. Apple sucks.
+
+## Tampermonkey
+
+There's a user script [here](https://greasyfork.org/zh-CN/scripts/38752-switch-search) for [Tampermonkey](http://tampermonkey.net).
