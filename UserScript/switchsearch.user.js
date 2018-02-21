@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         SwitchSearch
+// @name         Switch Search
 // @namespace    0x783A
-// @version      0.1
+// @version      0.9
 // @description  Switch search engines quickly.
 // @author       Wang Jinli
 // @include      *
