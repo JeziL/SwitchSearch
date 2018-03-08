@@ -4,7 +4,10 @@
 // @version      0.9
 // @description  Switch search engines quickly.
 // @author       Wang Jinli
-// @include      *
+// @include      *://*.baidu.com/*
+// @include      *://*.google.co*
+// @include      *://*.bing.com/*
+// @include      *://*.duckduckgo.com/*
 // @grant        GM_addStyle
 // ==/UserScript==
 
