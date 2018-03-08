@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Switch Search
 // @namespace    0x783A
-// @version      0.9
+// @version      0.9.1
 // @description  Switch search engines quickly.
 // @author       Wang Jinli
 // @include      *://*.baidu.com/*
